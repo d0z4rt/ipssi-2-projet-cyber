@@ -84,7 +84,7 @@ Exécution de code JavaScript dans le contexte du navigateur de la victime.
 
 **Remédiation :** Mise en place d'un **encodage en sortie (Output Encoding)** et application d'une politique de sécurité de contenu (**Content Security Policy - CSP**).
 
-### 3. IDOR – Insecure Direct Object Reference (Contournement d'authentification)
+### 3. IDOR - Insecure Direct Object Reference (Contournement d'authentification)
 
 **Module :** Authorization Bypass
 
@@ -108,7 +108,7 @@ Cookie: PHPSESSID=<session_utilisateur_standard>
 
 **Résultat de l'exploitation :** Accès direct à des pages administratives sans authentification valide.
 
-**Impact :** **CRITIQUE** — Élévation de privilèges et prise de contrôle de la gestion des utilisateurs.
+**Impact :** **CRITIQUE** - Élévation de privilèges et prise de contrôle de la gestion des utilisateurs.
 
 **Remédiation :** Implémenter un contrôle d'accès basé sur les rôles (**RBAC**) systématique sur chaque point d'entrée (endpoint) sensible.
 
@@ -123,7 +123,7 @@ Cookie: PHPSESSID=<session_utilisateur_standard>
 - Session 1 : `dvwaSession=7`
 - Session 2 : `dvwaSession=8`
 
-**Impact :** **ÉLEVÉ** — Risque de **Session Hijacking** par prédiction d'ID (attaque par force brute sur les cookies).
+**Impact :** **ÉLEVÉ** - Risque de **Session Hijacking** par prédiction d'ID (attaque par force brute sur les cookies).
 
 **Remédiation :** Utiliser un générateur de tokens cryptographiquement sécurisé et régénérer l'ID de session après chaque changement de privilège.
 
@@ -144,7 +144,7 @@ curl -v http://10.69.7.2
 - `Server: Apache/2.4.66 (Debian)` - Divulgation de la version précise.
 - Absence de headers de protection (`X-Frame-Options`, `X-Content-Type-Options`, `Strict-Transport-Security`).
 
-**Impact :** **FAIBLE** — Aide l'attaquant à la phase de reconnaissance en ciblant des vulnérabilités spécifiques à la version du serveur.
+**Impact :** **FAIBLE** - Aide l'attaquant à la phase de reconnaissance en ciblant des vulnérabilités spécifiques à la version du serveur.
 
 **Remédiation :** Désactiver la signature du serveur (`ServerTokens Prod`) et configurer les headers de sécurité indispensables.
 

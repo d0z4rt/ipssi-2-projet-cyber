@@ -27,6 +27,56 @@ L'objectif de cette phase est d'établir une visibilité complète sur l'infrast
 
 Afin de garantir un environnement de simulation réaliste et isolé, nous avons déployé une infrastructure virtualisée sous **Proxmox VE**.
 
+```mermaid
+---
+config:
+  layout: elk
+  theme: redux-dark
+---
+flowchart TD
+  subgraph EXTERNAL["🌐 Externe"]
+      ATTACKER["Auditeur"]
+      WAN["Réseau WAN<br/>10.69.1.0/24"]
+  end
+
+  subgraph PROXMOX_HOST["Hôte Proxmox VE"]
+
+    subgraph VIRTUAL_BRIDGE["Bridge Virtuel: nexa_tech"]
+        GATEWAY["Passerelle LAN<br/>10.69.7.1"]
+    end
+
+    subgraph KALI_VM["Kali Linux (Attaquant)"]
+        KALI_LAN["Interface LAN<br/>10.69.7.3"]
+        KALI_WAN["Interface WAN<br/>10.69.1.185"]
+    end
+
+    subgraph DEBIAN_VM["Debian LXC (Cible)"]
+        DEBIAN_LAN["Interface LAN<br/>10.69.7.2"]
+        SERVICES_SSH["SSH<br/>22/tcp"]
+        SERVICES_HTTP["HTTP + DVWA<br/>80/tcp"]
+    end
+  end
+
+  ATTACKER -->|"Commande à distance"| KALI_VM
+  WAN <-- "Accès Internet" --> KALI_WAN
+
+  KALI_LAN -- "Phase 1: Scan réseau<br/>Phase 2: Détection services<br/>Phase 3: Exploitation" --> GATEWAY
+  GATEWAY -->|"Isolation L2/L3"| DEBIAN_LAN
+
+  DEBIAN_LAN --> SERVICES_SSH
+  DEBIAN_LAN --> SERVICES_HTTP
+
+  classDef attaquant stroke:#9c36b5,stroke-width:2px
+  classDef cible stroke:#c92a2a,stroke-width:2px
+  classDef infrastructure stroke:#2b8a3e,stroke-width:2px
+  classDef externe stroke:#1864ab,stroke-width:2px
+
+  class KALI_VM,KALI_LAN,KALI_WAN,ATTACKER attaquant
+  class DEBIAN_VM,DEBIAN_LAN,SERVICES_SSH,SERVICES_HTTP cible
+  class VIRTUAL_BRIDGE,GATEWAY infrastructure
+  class EXTERNAL,WAN externe
+```
+
 ### Segmentation Réseau
 
 Pour respecter les bonnes pratiques de sécurité, un réseau virtuel dédié `nexa_tech` a été configuré. Ce réseau permet d'isoler les machines vulnérables du réseau hôte, simulant ainsi un segment DMZ ou un réseau interne d'entreprise.
