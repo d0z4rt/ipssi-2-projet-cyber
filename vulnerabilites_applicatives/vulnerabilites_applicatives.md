@@ -43,9 +43,9 @@ chmod +x Install-DVWA.sh
 
 ### 1. SQL Injection (SQLi)
 
-**Module :** SQL Injection (Low)
-
-**Vecteur d'attaque :** Paramètre d'entrée non assaini dans la requête SQL.
+| Module              | Vecteur d'attaque                                  |
+| ------------------- | -------------------------------------------------- |
+| SQL Injection (Low) | Paramètre d'entrée non assaini dans la requête SQL |
 
 **Preuve de Concept (PoC) :**
 
@@ -62,11 +62,11 @@ chmod +x Install-DVWA.sh
 
 **Remédiation :** Utiliser des **requêtes préparées (Prepared Statements)** avec PDO et implémenter une validation stricte des types de données.
 
-## 2. Cross-Site Scripting (XSS) - Reflected
+### 2. Cross-Site Scripting (XSS) - Reflected
 
-**Module :** XSS (Reflected)
-
-**Vecteur d'attaque :** Injection de scripts malveillants via un paramètre d'URL.
+| Module          | Vecteur d'attaque                                        |
+| --------------- | -------------------------------------------------------- |
+| XSS (Reflected) | Injection de scripts malveillants via un paramètre d'URL |
 
 **Preuve de Concept (PoC) :**
 
@@ -86,7 +86,9 @@ Exécution de code JavaScript dans le contexte du navigateur de la victime.
 
 ### 3. IDOR - Insecure Direct Object Reference (Contournement d'authentification)
 
-**Module :** Authorization Bypass
+| Module               | Vecteur d'attaque                                                     |
+| -------------------- | --------------------------------------------------------------------- |
+| Authorization Bypass | Accès direct à une URL administrative sans authentification préalable |
 
 **Description de la faille :**
 
@@ -96,8 +98,6 @@ L'IDOR (Insecure Direct Object Reference) est une faille de sécurité qui survi
 
 Le répertoire `/vulnerabilities/authbypass/` est normalement réservé au compte administrateur. Cependant, lorsqu'un utilisateur standard (par exemple `gordonb`) tente d'y accéder directement, l'application ne vérifie pas ses permissions.
 
-**Vecteur d'attaque :** Accès direct à une URL administrative sans authentification préalable.
-
 **Preuve de Concept (PoC) :**
 
 ```http
@@ -106,7 +106,9 @@ Host: 10.69.7.2
 Cookie: PHPSESSID=<session_utilisateur_standard>
 ```
 
-**Résultat de l'exploitation :** Accès direct à des pages administratives sans authentification valide.
+**Résultat de l'exploitation :**
+
+Accès direct à des pages administratives sans authentification valide.
 
 **Impact :** **CRITIQUE** - Élévation de privilèges et prise de contrôle de la gestion des utilisateurs.
 
@@ -114,9 +116,9 @@ Cookie: PHPSESSID=<session_utilisateur_standard>
 
 ### 4. Session Management : Weak Session IDs
 
-**Module :** Weak Session IDs
-
-**Vecteur d'attaque :** Prédictibilité de l'identifiant de session.
+| Module           | Vecteur d'attaque                          |
+| ---------------- | ------------------------------------------ |
+| Weak Session IDs | Prédictibilité de l'identifiant de session |
 
 **Preuve de Concept (PoC) :** Observation de l'en-tête `Set-Cookie` lors de sessions successives.
 
@@ -129,11 +131,11 @@ Cookie: PHPSESSID=<session_utilisateur_standard>
 
 ### 5. Mauvaise configuration HTTP (Security Misconfiguration)
 
-**Module :** Information Disclosure via Headers
+| Module                             | Vecteur d'attaque                    |
+| ---------------------------------- | ------------------------------------ |
+| Information Disclosure via Headers | Analyse des en-têtes de réponse HTTP |
 
-**Vecteur d'attaque :** Analyse des en-têtes de réponse HTTP.
-
-**Commande d'audit :**
+**Preuve de Concept (PoC) :**
 
 ```bash
 curl -v http://10.69.7.2
