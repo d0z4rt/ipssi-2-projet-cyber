@@ -8,7 +8,8 @@ L'objectif est d'évaluer la posture de sécurité de l'entreprise face à une t
 
 ## Scénario d'Audit
 
-**Client :** NexaTech (PME de 80 collaborateurs).  
+**Client :** NexaTech (PME de 80 collaborateurs).
+
 **Contexte :** NexaTech gère des documents RH sensibles via une application web PHP. Suite à une alerte de sécurité émanant de leur hébergeur signalant une tentative d'intrusion, une mission d'audit approfondie a été mandatée.
 
 **Objectifs de la mission :**
@@ -47,8 +48,8 @@ L'objectif est d'évaluer la posture de sécurité de l'entreprise face à une t
 
 | Jour   | Livrable                                                                                                                                                                                                   |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **J1** | [Cartographie de l'infrastructure](./cartographie_infrastructure/cartographie_infrastructure.md) et liste des [vulnérabilités applicatives​](./vulnerabilites_applicatives/vulnerabilites_applicatives.md)  |
-| **J2** | Corrections applicatives documentées et hardening serveur Linux                                                                                                                                             |
+| **J1** | [Cartographie de l'infrastructure](./cartographie_infrastructure/cartographie_infrastructure.md) et liste des [vulnérabilités applicatives​](./vulnerabilites_applicatives/vulnerabilites_applicatives.md) |
+| **J2** | Corrections applicatives documentées et hardening serveur Linux                                                                                                                                            |
 | **J3** | Script Bash v1 fonctionnel                                                                                                                                                                                 |
 | **J4** | Rapport d'audit technique détaillé                                                                                                                                                                         |
 | **J5** | Démonstration des vulnérabilités (PoC) et soutenance orale                                                                                                                                                 |
