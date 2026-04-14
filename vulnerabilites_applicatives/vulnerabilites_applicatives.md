@@ -1,4 +1,6 @@
 ---
+created_at: 2026-04-13
+updated_at: 2026-04-14
 aliases:
   - vulnérabilités applicatives
 ---

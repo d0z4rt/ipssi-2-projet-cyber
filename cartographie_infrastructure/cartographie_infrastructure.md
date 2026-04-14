@@ -1,4 +1,6 @@
 ---
+created_at: 2026-04-13
+updated_at: 2026-04-14
 aliases:
   - cartographie de l'infrastructure
 ---
@@ -123,8 +125,6 @@ sudo nmap -sS -sV -p 1-10000 -n 10.69.7.2
 
 - **Port 22/tcp :** `open` | `OpenSSH 10.0p2 Debian 7`
 - _Observation : Identification de la version précise du service SSH pour recherche ultérieure de vulnérabilités (CVE)._
-
----
 
 ### 3. Fingerprinting OS et Analyse de Vulnérabilités
 

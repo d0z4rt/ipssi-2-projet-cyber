@@ -1,5 +1,6 @@
 ---
-
+created_at: 2026-04-13
+updated_at: 2026-04-14
 ---
 
 ↑ [vulnérabilités applicatives](vulnerabilites_applicatives.md)

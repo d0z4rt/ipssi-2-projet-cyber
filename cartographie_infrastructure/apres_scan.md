@@ -1,5 +1,6 @@
 ---
-
+created_at: 2026-04-13
+updated_at: 2026-04-14
 ---
 
 ↑ [cartographie de l'infrastructure](cartographie_infrastructure.md)
