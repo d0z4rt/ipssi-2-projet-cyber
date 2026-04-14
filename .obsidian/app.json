@@ -1,0 +1,12 @@
+{
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "assets",
+  "livePreview": false,
+  "defaultViewMode": "preview",
+  "tabSize": 2,
+  "showInlineTitle": false,
+  "showLineNumber": true,
+  "alwaysUpdateLinks": true,
+  "openBehavior": "file:README"
+}
