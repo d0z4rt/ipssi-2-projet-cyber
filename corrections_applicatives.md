@@ -2,11 +2,11 @@
 created_at: 2026-04-14
 updated_at: 2026-04-16
 aliases:
-  - correctifs securite applicative
+  - Corrections applicatives
   - secure coding
 ---
 
-↑ [README](README.md)
+↑ [README](README.md)  | [Rapport d'audit](../rapport_audit.md)
 
 ---
 

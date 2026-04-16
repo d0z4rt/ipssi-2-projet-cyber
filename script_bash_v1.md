@@ -5,14 +5,14 @@ aliases:
   - script bash v1
 ---
 
-↑ [README](README.md)
+↑ [README](README.md) | [Rapport d'audit](../rapport_audit.md)
 
 ---
 
 # Script bash v1
 
 ```bash
-#!/usr/bin/env bash
+#!/bin/bash​
 set -u
 
 DATE="$(date +%Y-%m-%d_%H-%M-%S)"

@@ -5,7 +5,7 @@ aliases:
   - hardening serveur linux
 ---
 
-↑ [README](README.md)
+↑ [README](README.md)  | [Rapport d'audit](../rapport_audit.md)
 
 ---
 
@@ -48,7 +48,7 @@ ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_service_$(date +%Y-%m-%d) -C "Service
 ```bash
 mkdir /home/nexa_tech/.ssh
 cat > /home/nexa_tech/.ssh/authorized_keys << EOF
-XXX_PUB_KEY_XXX
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIET49cZnJGIqQbK7egeeCoM24/etFa+hM5C2pbfTSNgB Service key for nexa_tech
 EOF
 ```
 

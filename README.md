@@ -50,8 +50,8 @@ L'objectif est d'évaluer la posture de sécurité de l'entreprise face à une t
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **J1** | [Cartographie de l'infrastructure](./cartographie_infrastructure/cartographie_infrastructure.md) et liste des [vulnérabilités applicatives​](./vulnerabilites_applicatives/vulnerabilites_applicatives.md) |
 | **J2** | [Corrections applicatives documentées](./corrections_applicatives.md) et [hardening serveur linux](hardening_serveur_linux.md)                                                                             |
-| **J3** | Script Bash v1 fonctionnel                                                                                                                                                                                 |
-| **J4** | Rapport d'audit technique détaillé                                                                                                                                                                         |
+| **J3** | [Hardening Server Windows](hardening_server_windows.md) et [script_bash_v1](script_bash_v1.md) fonctionnel                                                                                                 |
+| **J4** | [Rapport d'audit](rapport_audit.md) technique détaillé                                                                                                                                                     |
 | **J5** | Démonstration des vulnérabilités (PoC) et soutenance orale                                                                                                                                                 |
 
 ## Statut du projet
@@ -62,6 +62,7 @@ L'objectif est d'évaluer la posture de sécurité de l'entreprise face à une t
 | Analyse des vulnérabilités | Terminé     |
 | Corrections applicatives   | Terminé     |
 | Hardening serveur Linux    | Terminé     |
+| Hardening Server Windows   | En cours    |
 | Script d'automatisation    | En cours    |
 | Rapport final              | En cours    |
 | Soutenance                 | À livrer J5 |
