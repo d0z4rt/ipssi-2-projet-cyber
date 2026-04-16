@@ -62,7 +62,7 @@ L'objectif est d'évaluer la posture de sécurité de l'entreprise face à une t
 | Analyse des vulnérabilités | Terminé     |
 | Corrections applicatives   | Terminé     |
 | Hardening serveur Linux    | Terminé     |
-| Hardening Server Windows   | En cours    |
-| Script d'automatisation    | En cours    |
-| Rapport final              | En cours    |
+| Hardening Server Windows   | Terminé     |
+| Script d'automatisation    | Terminé     |
+| Rapport final              | Terminé     |
 | Soutenance                 | À livrer J5 |

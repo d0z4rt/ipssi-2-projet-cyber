@@ -11,10 +11,10 @@ aliases:
 
 # RAPPORT D'AUDIT DE SÉCURITÉ
 
-**Client :** NexaTech
-**Périmètre :** Infrastructure Réseau, Serveur Windows AD, Serveur Linux Web, Application RH
-**Version :** 1.0 (Finale)
-**Date :** 16 Avril 2026
+**Client :** NexaTech\
+**Périmètre :** Infrastructure Réseau, Serveur Windows AD, Serveur Linux Web, Application RH\
+**Version :** 1.0 (Finale)\
+**Date :** 16 Avril 2026\
 **Classification :** Confidentiel
 
 ---
