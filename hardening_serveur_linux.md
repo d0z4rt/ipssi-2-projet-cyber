@@ -1,6 +1,6 @@
 ---
-created_at: 2026-04-15
-updated_at: 2026-04-15
+created_at: 2026-04-14
+updated_at: 2026-04-16
 aliases:
   - hardening serveur linux
 ---
